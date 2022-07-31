@@ -1,6 +1,10 @@
 
  function frequency(string) {
-    // Code goes here
+    const stringOrdenado = string.split("") //SEPARA POR LETRA (EN UN ARREGLO)
+    stringOrdenado.sort()                   //ORDENA LAS LETRAS SEPARADAS ANTERIORMENTE (ORDENA EL ARREGLO)
+    const resultado = {}                    
+    stringOrdenado.forEach(letra => (resultado[letra] = resultado[letra] + 1 || 1)) //SE AUMENTA EL CONTADOR CADA QUE SE PASA POR ESA LETRA
+    console.log(resultado)
    }
    
    console.log('Test 1:', frequency('cccbbbaaa'))
